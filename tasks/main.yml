@@ -6,3 +6,6 @@
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
   with_items: admin_packages
+
+- name: ensure ntp is running
+  service: name=ntp state=started
