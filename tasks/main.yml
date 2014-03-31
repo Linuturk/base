@@ -2,3 +2,7 @@
 # tasks file for base
 - name: setup the rack user
   user: name=rack comment="Rackspace Support" state=present
+
+- name: install necessary admin packages
+  apt: name={{ item }} state=installed update_cache=yes
+  with_items: admin_packages

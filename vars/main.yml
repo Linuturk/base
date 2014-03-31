@@ -1,2 +1,15 @@
 ---
 # vars file for base
+admin_packages:
+  - htop
+  - vim
+  - sysstat
+  - dstat
+  - screen
+  - curl
+  - telnet
+  - traceroute
+  - mtr
+  - zip
+  - lsof
+  - ntp
