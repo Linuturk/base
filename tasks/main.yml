@@ -1,2 +1,4 @@
 ---
 # tasks file for base
+- name: setup the rack user
+  user: name=rack comment="Rackspace Support" state=present
