@@ -28,7 +28,7 @@ Here is a simple example playbook:
     ---
     - hosts: all
       roles:
-        - Rackspace_Automation.docker
+        - Rackspace_Automation.base
 
 License
 -------
