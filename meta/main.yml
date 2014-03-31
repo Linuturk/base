@@ -71,10 +71,10 @@ galaxy_info:
   #  - maverick
   #  - natty
   #  - oneiric
-    - precise
+  #  - precise
   #  - quantal
   #  - raring
-  #  - saucy
+    - saucy
   #  - trusty
   #- name: SLES
   #  versions:
