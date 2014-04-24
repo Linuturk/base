@@ -11,7 +11,7 @@
     - bruc5529
 
 - name: install python-apt
-  apt: name= python-apt state=installed
+  apt: name=python-apt state=installed
 
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
