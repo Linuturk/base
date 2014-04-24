@@ -3,6 +3,13 @@
 - name: setup the rack user
   user: name=rack comment="Rackspace Support" state=present
 
+- name: setup ssh keys for rack user
+  authorized_key: user=rack key="{{ item }}"
+  with_file:
+    - files/just4233
+    - files/troy4902
+    - files/bruc5529
+
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
   with_items: admin_packages
