@@ -10,9 +10,6 @@
     - troy4902
     - bruc5529
 
-- name: install python-apt
-  command: apt-get install python-apt
-
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
   with_items: admin_packages
