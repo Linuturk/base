@@ -6,9 +6,9 @@
 - name: setup ssh keys for rack user
   authorized_key: user=rack key="{{ item }}"
   with_file:
-    - files/just4233
-    - files/troy4902
-    - files/bruc5529
+    - just4233
+    - troy4902
+    - bruc5529
 
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
