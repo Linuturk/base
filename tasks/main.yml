@@ -10,6 +10,9 @@
     - troy4902
     - bruc5529
 
+- name: install python-apt
+  apt: name= python-apt state=installed
+
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
   with_items: admin_packages
