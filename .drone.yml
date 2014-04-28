@@ -1,4 +1,4 @@
-image: python2.7
+image: dockerfile/ubuntu
 script:
   - cat /etc/issue
   - sudo apt-get install python-pip build-essential python-dev -y
