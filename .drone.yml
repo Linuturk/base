@@ -4,6 +4,6 @@ script:
   - sudo apt-get install python-pip build-essential python-dev -y
   - sudo pip install ansible
   - sudo mkdir -p /etc/ansible
-  - sudo echo "localhost" > /etc/ansible/hosts
+  - sudo "echo 'localhost' > /etc/ansible/hosts"
   - sudo ansible-galaxy install Rackspace_Automation.base
   - ansible-playbook /var/cache/drone/src/github.com/rack-roles/base/tests/main.yml --connection=local -s
