@@ -6,4 +6,5 @@ script:
   - pip install ansible
   - mkdir -p /etc/ansible
   - echo "localhost" > /etc/ansible/hosts
-  - ansible-playbook /var/cache/drone/src/github.com/rack-roles/base/tests/test.yml
+  - ansible-galaxy install Rackspace_automation.base
+  - ansible-playbook /var/cache/drone/src/github.com/rack-roles/base/tests/main.yml
