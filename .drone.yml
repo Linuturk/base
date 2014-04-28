@@ -1,8 +1,7 @@
-image: bradrydzewski/base
-env:
-  - GOPATH=/var/cache/drone
+image: python2.7
 script:
-  #  - apt-get install python-pip build-essential python-dev git -y
+  - cat /etc/issue
+  - apt-get install python-pip build-essential python-dev -y
   - pip install ansible
   - mkdir -p /etc/ansible
   - echo "localhost" > /etc/ansible/hosts
