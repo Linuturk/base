@@ -1,8 +1,4 @@
-#image: dockerfile/ubuntu
-image:
-  - name: dockerfile/ubuntu
-  - name: bradrydzewski/python
-    tag: 2.7
+image: dockerfile/ubuntu
 script:
   - cat /etc/issue
   - apt-get install python-pip build-essential python-dev -y
