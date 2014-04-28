@@ -1,4 +1,5 @@
-image: dockerfile/ubuntu
+#image: dockerfile/ubuntu
+image:
   - name: dockerfile/ubuntu
   - name: bradrydzewski/python
     tag: 2.7
