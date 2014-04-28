@@ -2,7 +2,7 @@ image: mischief/docker-golang
 env:
   - GOPATH=/var/cache/drone
 script:
-  - apt-get install python-pip -y
+  - apt-get install python-pip build-essentials python-dev -y
   - pip install ansible
   - echo "localhost" > /etc/ansible/hosts
   - ansible-playbook /var/cache/drone/src/github.com/rack-roles/base/tests/test.yml
