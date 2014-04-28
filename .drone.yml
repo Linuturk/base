@@ -1,7 +1,7 @@
 image: dockerfile/ubuntu
 script:
   - cat /etc/issue
-  - sudo apt-get install python-pip build-essential python-dev -y
+  - apt-get install python-pip build-essential python-dev -y
   - sudo pip install ansible
   - sudo mkdir -p /etc/ansible
   - sudo sh -c "echo 'localhost' > /etc/ansible/hosts"
