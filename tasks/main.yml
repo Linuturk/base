@@ -19,3 +19,6 @@
 
 - name: ensure ntp is running
   service: name=ntp state=started
+
+- name: configure motd
+  copy: src=motd.tail dest=/etc/motd.tail owner=root group=root mode=0644
