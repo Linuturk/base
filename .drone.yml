@@ -1,9 +1,4 @@
-image: dockerfile/ubuntu
+image: linuturk/ubuntu-ansible
 script:
-  - cat /etc/issue
-  - apt-get install python-pip build-essential python-dev -y
-  - pip install ansible
-  - mkdir -p /etc/ansible
-  - echo 'localhost' > /etc/ansible/hosts
   - ansible-galaxy install Rackspace_Automation.base
   - ansible-playbook /var/cache/drone/src/github.com/rack-roles/base/tests/main.yml --connection=local
