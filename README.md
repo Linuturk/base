@@ -3,6 +3,8 @@ base
 
 This role is responsible for setting up a base line for all supported systems.
 
+[![Build Status](http://drone.onitato.com/github.com/rack-roles/base/status.svg?branch=master)](http://drone.onitato.com/github.com/rack-roles/base)
+
 Requirements
 ------------
 
