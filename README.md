@@ -13,9 +13,8 @@ No requirements.
 Role Variables
 --------------
 
-There is currently one variable set.
-
 * `admin_packages`: This variable contains a list of packages to be installed on all systems.
+* `rax_pub_keys` is a list of public SSH keys to be set.
 
 Dependencies
 ------------

@@ -5,10 +5,7 @@
 
 - name: setup ssh keys for rack user
   authorized_key: user=rack key="{{ item }}"
-  with_file:
-    - just4233
-    - troy4902
-    - bruc5529
+  with_items: rax_pub_keys
 
 - name: python-apt hack until 1.6
   raw: apt-get update && apt-get install python-apt -y -q
