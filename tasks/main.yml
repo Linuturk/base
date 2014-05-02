@@ -22,3 +22,6 @@
 
 - name: configure motd
   copy: src=motd.tail dest=/etc/motd.tail owner=root group=root mode=0644
+
+- name: replace missing update-motd.d script
+  copy: src=99-footer dest=/etc/update-motd.d/99-footer owner=root group=root mode=0755
