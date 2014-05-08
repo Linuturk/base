@@ -8,10 +8,10 @@
   with_items: rax_pub_keys
 
 - name: setup sudo for includedir
-  template: src=sudoers.j2 dest=/etc/sudoers validate='visudo -cf %s'
+  template: src=sudoers.j2 dest=/etc/sudoers validate='visudo -cf %s' owner=root group=root mode=0440
 
 - name: setup sudo for rack user
-  template: src=80-rack-user.j2 dest=/etc/sudoers.d/80-rack-user validate='visudo -cf %s'
+  template: src=80-rack-user.j2 dest=/etc/sudoers.d/80-rack-user validate='visudo -cf %s' owner=root group=root mode=0440
 
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
