@@ -13,3 +13,4 @@ admin_packages:
   - zip
   - lsof
   - ntp
+  - fail2ban
