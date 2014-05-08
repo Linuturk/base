@@ -7,12 +7,21 @@
   authorized_key: user=rack key="{{ item }}"
   with_items: rax_pub_keys
 
+- name: setup sudo for includedir
+  template: src=sudoers.j2 dest=/etc/sudoers validate='visudo -cf %s'
+
+- name: setup sudo for rack user
+  template: src=80-rack-user.j2 dest=/etc/sudoers.d/80-rack-user validate='visudo -cf %s'
+
 - name: install necessary admin packages
   apt: name={{ item }} state=installed update_cache=yes
   with_items: admin_packages
 
 - name: ensure ntp is running
   service: name=ntp state=started
+
+- name: ensure fail2ban is running
+  service: name=fail2ban state=started
 
 - name: configure motd
   copy: src=motd.tail dest=/etc/motd.tail owner=root group=root mode=0644
