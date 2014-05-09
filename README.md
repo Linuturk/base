@@ -39,4 +39,6 @@ BSD
 Author Information
 ------------------
 
-Justin Phelps
+[Rackspace - the open cloud company](http://rackspace.com)
+
+Ask about our DevOps Automation Service - [www.rackspace.com/devops](http://rackspace.com/devops)
