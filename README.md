@@ -29,7 +29,7 @@ Here is a simple example playbook:
     ---
     - hosts: all
       roles:
-        - Rackspace_Automation.base
+        - { role: Rackspace_Automation.base, x: 42 }
 
 License
 -------
