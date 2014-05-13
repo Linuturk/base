@@ -13,7 +13,8 @@ No requirements.
 Role Variables
 --------------
 
-* `admin_packages`: This variable contains a list of packages to be installed on all systems.
+* `base_admin_packages`: This variable contains a list of packages to be installed on all systems.
+* `base_custom_packages`: This variable can contain a custom list of packages that would vary from the default set.
 * `rax_pub_keys` is a list of public SSH keys to be set.
 
 Dependencies
