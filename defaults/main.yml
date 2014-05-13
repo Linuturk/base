@@ -1,2 +1,16 @@
 ---
 # defaults file for base
+base_admin_packages:
+  - htop
+  - vim
+  - sysstat
+  - dstat
+  - screen
+  - curl
+  - telnet
+  - traceroute
+  - mtr
+  - zip
+  - lsof
+  - ntp
+  - fail2ban
