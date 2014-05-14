@@ -20,6 +20,9 @@
 - name: ensure ntp is running
   service: name=ntp state=started
 
+- name: configure fail2ban whitelist
+  template: src=jail.local.j2 dest=/etc/fail2ban/jail.local owner=root group=root mode=0644
+
 - name: ensure fail2ban is running
   service: name=fail2ban state=started
 
