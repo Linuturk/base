@@ -1,0 +1,8 @@
+---
+- name: RedHat | Supported OS
+  set_fact:
+    base_supported_os: True
+
+- name: RedHat | install necessary admin and custom packages
+  yum: pkg={{ item }} state=installed
+  with_items: base_admin_packages| union(base_custom_packages)
