@@ -6,7 +6,8 @@
 - name: setup ssh keys for rack user
   authorized_key: user=rack key="{{ item }}"
   with_items: rax_pub_keys
-
+  when: rax_pub_keys is defined
+  
 - name: setup sudo for includedir
   template: src=sudoers.j2 dest=/etc/sudoers validate='visudo -cf %s' owner=root group=root mode=0440
 
