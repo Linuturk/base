@@ -10,7 +10,9 @@
 - include: RedHat.yml
   when: ansible_os_family == 'RedHat'
 
-- include: unsupported_os.yml
+- name: Check for unsupported target operating system
+  fail:
+    msg: "The operating system of the target machine ({{ inventory_hostname }}) is not currently supported."
   when: base_supported_os is not defined
 
 - name: setup the rack user

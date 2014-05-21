@@ -1,5 +1,7 @@
 ---
-- name: Debian | Supported OS
+- name: >
+    Debian | set_fact
+     base_supported_os: True
   set_fact:
     base_supported_os: True
 
