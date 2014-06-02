@@ -3,4 +3,5 @@ script:
   - git clone https://github.com/rack-roles/test.ping
   - bash test.ping/lint.sh
   - ansible-galaxy install -r /var/cache/drone/src/github.com/rack-roles/base/tests/roles.list
+  - ansible-playbook --syntax-check $DRONE_BUILD_DIR/tests/main.yml
   - ansible-playbook /var/cache/drone/src/github.com/rack-roles/base/tests/main.yml --connection=local
