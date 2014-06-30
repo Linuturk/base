@@ -15,10 +15,10 @@
     msg: "The operating system of the target machine ({{ inventory_hostname }}) is not currently supported."
   when: base_supported_os is not defined
 
-- name: setup the rack user
-  user: name={{ base_username }} comment="Rackspace Support" state=present shell=/bin/bash
+- name: setup the management user
+  user: name={{ base_username }} state=present shell=/bin/bash
 
-- name: setup ssh keys for rack user
+- name: setup ssh keys for management user
   authorized_key: user={{ base_username }} key="{{ item }}"
   with_items: rax_pub_keys
   when: rax_pub_keys is defined
