@@ -8,7 +8,7 @@ This role is responsible for setting up a base line for all supported systems.
 Requirements
 ------------
 
-No requirements.
+Ansible version 1.6.3 or greater.
 
 Role Variables
 --------------
