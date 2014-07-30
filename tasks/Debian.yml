@@ -7,7 +7,7 @@
 
 - name: Debian | install necessary admin and custom packages
   apt: name={{ item }} state=installed update_cache=yes
-  with_items: base_admin_packages| union(base_custom_packages)
+  with_items: base_admin_packages| union(base_custom_packages) | list
 
 - name: Debian | replace missing update-motd.d script
   copy: src=99-footer dest=/etc/update-motd.d/99-footer owner=root group=root mode=0755
